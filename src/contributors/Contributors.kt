@@ -20,7 +20,7 @@ enum class Variant {
     CHANNELS          // Request7Channels
 }
 
-interface Contributors: CoroutineScope {
+interface Contributors : CoroutineScope {
 
     val job: Job
 
@@ -178,8 +178,7 @@ interface Contributors: CoroutineScope {
         val params = getParams()
         if (params.username.isEmpty() && params.password.isEmpty()) {
             removeStoredParams()
-        }
-        else {
+        } else {
             saveParams(params)
         }
     }
